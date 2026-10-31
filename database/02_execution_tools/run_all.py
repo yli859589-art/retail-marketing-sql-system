@@ -12,7 +12,10 @@ import sys
 import time
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(ROOT.parent / ".env")
 SQL_DIR = ROOT / "01_fixed_sql"
 LOG = ROOT / "05_logs" / "database_execution.log"
 SCRIPTS = ("01_schema.sql", "02_seed_dict.sql", "03_seed_bulk.sql")

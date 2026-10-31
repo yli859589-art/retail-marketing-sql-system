@@ -3,8 +3,10 @@ from __future__ import annotations
 import csv, os, re, sys
 from pathlib import Path
 import pymysql
+from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(ROOT.parent / ".env")
 SQL_FILE = ROOT / "01_fixed_sql" / "04_negative_tests.sql"
 OUT = ROOT / "04_test_results" / "negative_tests_results.csv"
 
