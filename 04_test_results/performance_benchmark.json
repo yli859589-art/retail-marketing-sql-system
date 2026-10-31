@@ -1,0 +1,20 @@
+{
+  "cold_seconds": {
+    "/admin": 9.2,
+    "/admin/sales": 50.55,
+    "/admin/members/rfm": 8.25,
+    "/admin/members/repurchase": 10.1,
+    "/admin/members/recall": 13.93,
+    "/admin/coupons": 30.76,
+    "/admin/data-quality": 25.87
+  },
+  "warm_seconds": {
+    "/admin": 0.0,
+    "/admin/sales": 0.0,
+    "/admin/members/rfm": 0.0,
+    "/admin/members/repurchase": 0.0,
+    "/admin/members/recall": 0.01,
+    "/admin/coupons": 0.0,
+    "/admin/data-quality": 0.0
+  }
+}

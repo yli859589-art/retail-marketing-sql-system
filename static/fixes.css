@@ -1,0 +1,5 @@
+/* Final stability pass: keep the extended order controls legible at desktop and mobile widths. */
+.filters.advanced{align-items:flex-end;flex-wrap:wrap;gap:10px}
+.filters.advanced label{min-width:105px}
+.filters.advanced input,.filters.advanced select{max-width:185px}
+@media (max-width:900px){.filters.advanced label{min-width:calc(50% - 8px)}.filters.advanced input,.filters.advanced select{width:100%;max-width:none}}

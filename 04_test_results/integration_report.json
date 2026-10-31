@@ -1,0 +1,97 @@
+[
+  {
+    "path": "/api/health",
+    "status": 200,
+    "seconds": 0.01
+  },
+  {
+    "path": "/my",
+    "status": 200,
+    "seconds": 0.07
+  },
+  {
+    "path": "/my/orders?size=10",
+    "status": 200,
+    "seconds": 0.05
+  },
+  {
+    "path": "/my/orders/220000",
+    "status": 200,
+    "seconds": 0.04
+  },
+  {
+    "path": "/my/analytics",
+    "status": 200,
+    "seconds": 0.06
+  },
+  {
+    "path": "/my/coupons",
+    "status": 200,
+    "seconds": 0.03
+  },
+  {
+    "path": "/my/profile",
+    "status": 200,
+    "seconds": 0.03
+  },
+  {
+    "path": "/admin",
+    "status": 200,
+    "seconds": 9.97
+  },
+  {
+    "path": "/admin/sales",
+    "status": 200,
+    "seconds": 56.62
+  },
+  {
+    "path": "/admin/orders?size=10",
+    "status": 200,
+    "seconds": 2.1
+  },
+  {
+    "path": "/admin/products?size=10",
+    "status": 200,
+    "seconds": 0.29
+  },
+  {
+    "path": "/admin/members?size=10",
+    "status": 200,
+    "seconds": 0.66
+  },
+  {
+    "path": "/admin/members/rfm",
+    "status": 200,
+    "seconds": 9.25
+  },
+  {
+    "path": "/admin/members/repurchase",
+    "status": 200,
+    "seconds": 10.27
+  },
+  {
+    "path": "/admin/members/recall",
+    "status": 200,
+    "seconds": 21.25
+  },
+  {
+    "path": "/admin/coupons",
+    "status": 200,
+    "seconds": 38.32
+  },
+  {
+    "path": "/admin/marketing",
+    "status": 200,
+    "seconds": 8.78
+  },
+  {
+    "path": "/admin/data-quality",
+    "status": 200,
+    "seconds": 26.75
+  },
+  {
+    "path": "/admin/performance",
+    "status": 200,
+    "seconds": 0.05
+  }
+]

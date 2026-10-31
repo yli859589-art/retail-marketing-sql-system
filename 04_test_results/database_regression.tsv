@@ -1,0 +1,22 @@
+table_name	row_count
+member	200000
+sales_order	600000
+order_item	2000000
+coupon_instance	1493852
+user_account	2
+Table	Create Table
+user_account	CREATE TABLE `user_account` (
+  `user_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(40) NOT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `role` enum('CUSTOMER','ADMIN') NOT NULL,
+  `member_id` bigint unsigned DEFAULT NULL,
+  `status` enum('ACTIVE','DISABLED') NOT NULL DEFAULT 'ACTIVE',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `uk_user_account_username` (`username`),
+  UNIQUE KEY `uk_user_account_member` (`member_id`),
+  CONSTRAINT `fk_user_account_member` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `ck_user_account_role_member` CHECK ((((`role` = _utf8mb4'ADMIN') and (`member_id` is null)) or ((`role` = _utf8mb4'CUSTOMER') and (`member_id` is not null))))
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Web 应用账号；密码仅保存哈希'
